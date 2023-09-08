@@ -1,5 +1,5 @@
 const initialState = {
-  count: 0,
+  results: [],
 };
 
 const searchReducer = (state = initialState, action) => {
