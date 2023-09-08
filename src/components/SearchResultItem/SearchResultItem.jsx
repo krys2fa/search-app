@@ -7,6 +7,14 @@ const SearchResultItem = ({
   isDisabled,
   addFavoriteItem,
 }) => {
+  if (!result) {
+    return (
+      <li style={{ padding: "10px", color: "#333" }}>
+        <span>No results available</span>
+      </li>
+    );
+  }
+
   const itemStyle = {
     display: "flex",
     justifyContent: "space-between",
