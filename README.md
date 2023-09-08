@@ -28,13 +28,9 @@ Additionally, implement **_one or both_** of the following features:
 - [Torre Genome Information endpoint](https://torre.ai/${result.username}).
 - [Torre People Search endpoint](https://torre.ai/api/entities/_searchStream).
 
-## Live Video Presentation.
-
-Click [here](https://www.loom.com/share/fe8f776740d0414cada1de31b3496186) to watch a video presentation of the web app.
-
 ## Live App
 
-Click [here](https://car-show-guide.netlify.app/) to visit a live version of the web app which has been deployed to Netlify.
+Click [here](https://searchi-app.netlify.app/) to visit a live version of the web app which has been deployed to Netlify.
 
 ## Getting Started
 

@@ -6,17 +6,16 @@ import SearchResultItem from "../../components/SearchResultItem/SearchResultItem
 const SearchResults = ({ searchTerm }) => {
   const dispatch = useDispatch();
   const searchResults = useSelector((state) => state.search.results);
+  const favorites = useSelector((state) => state.favorites.favorites);
 
-  const [favorites, setFavorites] = useState([]);
   const [disabledFavorites, setDisabledFavorites] = useState([]);
 
   const addFavoriteItem = (item) => {
     dispatch(addToFavorites(item));
-    setFavorites([...favorites, item.ggId]);
     setDisabledFavorites([...disabledFavorites, item.ggId]);
   };
 
-  const isFavorite = (ggId) => favorites.includes(ggId);
+  const isFavorite = (ggId) => favorites.some((item) => item.ggId === ggId);
   const isDisabled = (ggId) => disabledFavorites.includes(ggId);
 
   return (
