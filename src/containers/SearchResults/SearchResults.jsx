@@ -1,13 +1,20 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { addToFavorites } from "../../redux/actions/favoritesActions.js";
 
 const SearchResults = ({ searchTerm }) => {
+  const dispatch = useDispatch();
   console.log("searchterm", searchTerm);
 
   const searchResults = useSelector((state) => {
     console.log("state", state);
     return state.search.results;
   });
+
+  const addFavoriteItem = (item) => {
+    console.log("item", item);
+    dispatch(addToFavorites(item));
+  };
 
   return (
     <div>
@@ -16,7 +23,12 @@ const SearchResults = ({ searchTerm }) => {
         {searchTerm.trim().length > 0 &&
           searchResults &&
           searchResults.map((result) => (
-            <li key={result.ggId}>{result.name}</li>
+            <li key={result.ggId}>
+              <span>{result.name}</span>
+              <button id={result.ggId} onClick={() => addFavoriteItem(result)}>
+                Add to Favorites
+              </button>
+            </li>
           ))}
       </ul>
     </div>

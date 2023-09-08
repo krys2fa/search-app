@@ -16,7 +16,7 @@ const App = () => {
       <SearchBar onSearchTermChange={handleSearchTermChange} />
       <SearchResults searchTerm={searchTerm} />
       <RecentSearches />
-      {/* <FavoritesList /> */}
+      <FavoritesList />
     </div>
   );
 };

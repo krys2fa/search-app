@@ -1,17 +1,26 @@
 import React from "react";
-import { useSelector } from "react-redux";
-
+import { useSelector, useDispatch } from "react-redux";
+import { removeFromFavorites } from "../../redux/actions/favoritesActions";
 const FavoritesList = () => {
-  const favorites = useSelector((state) => state.search.favorites);
+  const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites.favorites);
+
+  const removeFavoriteItem = (id) => {
+    dispatch(removeFromFavorites(id));
+  };
 
   return (
     <div>
       <h2>Favorites</h2>
-      <ul>
-        {favorites.map((favorite) => (
-          <li key={favorite.id}>{favorite.name}</li>
+      {favorites &&
+        favorites.map((favorite) => (
+          <div key={favorite.ggId}>
+            <span>{favorite.name}</span>
+            <button onClick={() => removeFavoriteItem(favorite.ggId)}>
+              Remove from Favorites
+            </button>
+          </div>
         ))}
-      </ul>
     </div>
   );
 };
