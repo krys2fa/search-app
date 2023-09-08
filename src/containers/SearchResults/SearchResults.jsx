@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToFavorites } from "../../redux/actions/favoritesActions.js";
+import { FaStar } from "react-icons/fa";
 
 const SearchResults = ({ searchTerm }) => {
   const dispatch = useDispatch();
@@ -30,12 +31,12 @@ const SearchResults = ({ searchTerm }) => {
                 rel="noopener noreferrer"
               >
                 <span>
-                  <img src={result.imageUrl} alt="" />
+                  <img src={result.imageUrl} alt="Profile Pic" />
                 </span>
                 <span>{result.name}</span>
               </a>
               <button id={result.ggId} onClick={() => addFavoriteItem(result)}>
-                Add to Favorites
+                <FaStar />
               </button>
             </li>
           ))}
