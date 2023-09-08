@@ -5,6 +5,7 @@ import {
   searchAction,
   updateRecentSearches,
 } from "../../redux/actions/searchActions.js";
+import { FaSearch } from "react-icons/fa";
 
 const SearchBar = ({ onSearchTermChange }) => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const SearchBar = ({ onSearchTermChange }) => {
 
   return (
     <div>
+      <FaSearch />
       <input type="text" placeholder="Enter name..." onChange={handleChange} />
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import SearchBar from "./containers/SearchBar/SearchBar";
 import SearchResults from "./containers/SearchResults/SearchResults";
 import RecentSearches from "./containers/RecentSearches/RecentSearches";
