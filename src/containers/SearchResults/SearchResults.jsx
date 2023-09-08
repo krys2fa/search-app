@@ -21,10 +21,11 @@ const SearchResults = ({ searchTerm }) => {
 
   return (
     <div>
-      <ul className="list-group">
-        {searchTerm.trim().length > 0 &&
-          searchResults &&
-          searchResults.map((result) => (
+      {searchTerm.trim().length > 0 &&
+      searchResults &&
+      searchResults.length > 0 ? (
+        <ul className="list-group">
+          {searchResults.map((result) => (
             <SearchResultItem
               key={result.ggId}
               result={result}
@@ -33,7 +34,10 @@ const SearchResults = ({ searchTerm }) => {
               addFavoriteItem={addFavoriteItem}
             />
           ))}
-      </ul>
+        </ul>
+      ) : (
+        <p className="text-center">No results available</p>
+      )}
     </div>
   );
 };
