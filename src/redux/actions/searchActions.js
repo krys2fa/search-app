@@ -31,7 +31,6 @@ export const searchAction = (query) => {
       });
       const payload = parseData(response);
 
-      console.log("response", payload);
       dispatch({
         type: "UPDATE_SEARCH_RESULTS",
         payload,

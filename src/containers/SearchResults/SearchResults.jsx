@@ -21,7 +21,6 @@ const SearchResults = ({ searchTerm }) => {
 
   return (
     <div>
-      <h2>Search Results</h2>
       <ul className="list-group">
         {searchTerm.trim().length > 0 &&
           searchResults &&

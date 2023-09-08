@@ -7,7 +7,7 @@ const favoritesReducer = (state = initialState, action) => {
     case "ADD_TO_FAVORITES":
       return {
         ...state,
-        favorites: [...state.favorites, action.payload],
+        favorites: [action.payload, ...state.favorites],
       };
     case "REMOVE_FROM_FAVORITES":
       return {

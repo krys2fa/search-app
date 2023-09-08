@@ -12,17 +12,28 @@ const FavoritesList = () => {
   };
 
   return (
-    <div>
-      <h2>Favorites</h2>
-      {favorites &&
-        favorites.map((favorite) => (
-          <div key={favorite.ggId}>
-            <span>{favorite.name}</span>
-            <button onClick={() => removeFavoriteItem(favorite.ggId)}>
-              <FaTrashAlt />
-            </button>
-          </div>
-        ))}
+    <div className="container mt-4">
+      <h2 className="mb-3 text-center">Favorites</h2>
+      {favorites && favorites.length > 0 ? (
+        <ul className="list-group">
+          {favorites.map((favorite) => (
+            <li
+              key={favorite.ggId}
+              className="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <span>{favorite.name}</span>
+              <button
+                className="btn btn-danger btn-sm"
+                onClick={() => removeFavoriteItem(favorite.ggId)}
+              >
+                <FaTrashAlt />
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-center">No favorites added yet.</p>
+      )}
     </div>
   );
 };

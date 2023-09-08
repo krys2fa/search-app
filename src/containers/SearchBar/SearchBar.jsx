@@ -5,18 +5,16 @@ import {
   searchAction,
   updateRecentSearches,
 } from "../../redux/actions/searchActions.js";
-import { FaSearch } from "react-icons/fa";
+import SearchBarElement from "../../components/SearchBarElement/SearchBarElement.jsx";
 
 const SearchBar = ({ onSearchTermChange }) => {
   const dispatch = useDispatch();
 
   const handleSearch = (event) => {
     const query = event.target.value;
-    console.log(query);
 
     onSearchTermChange(query);
     if (query.trim().length > 0) {
-      console.log("q", query.length);
       dispatch(searchAction(query));
       dispatch(updateRecentSearches(query));
     }
@@ -24,12 +22,7 @@ const SearchBar = ({ onSearchTermChange }) => {
 
   const handleChange = debounce(handleSearch, 500);
 
-  return (
-    <div>
-      <FaSearch />
-      <input type="text" placeholder="Enter name..." onChange={handleChange} />
-    </div>
-  );
+  return <SearchBarElement handleChange={handleChange} />;
 };
 
 export default SearchBar;

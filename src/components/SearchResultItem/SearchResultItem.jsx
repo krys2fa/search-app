@@ -7,16 +7,36 @@ const SearchResultItem = ({
   isDisabled,
   addFavoriteItem,
 }) => {
+  const itemStyle = {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "10px",
+    borderBottom: "1px solid #ddd",
+    textDecoration: "none",
+    color: "#333",
+  };
+
+  const linkStyle = {
+    display: "flex",
+    alignItems: "center",
+    textDecoration: "none",
+    color: "#fff",
+    marginLeft: "20px",
+  };
+
+  const starStyle = {
+    cursor: isDisabled(result.ggId) ? "not-allowed" : "pointer",
+    color: isFavorite(result.ggId) ? "gold" : "gray",
+  };
+
   return (
-    <li
-      key={result.ggId}
-      className="list-group-item d-flex justify-content-between align-items-center"
-    >
+    <li key={result.ggId} style={itemStyle}>
       <a
         href={`https://torre.ai/${result.username}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="d-flex align-items-center"
+        style={linkStyle}
       >
         <img
           src={result.imageUrl}
@@ -24,14 +44,14 @@ const SearchResultItem = ({
           className="mr-3 rounded-circle"
           style={{ maxWidth: "50px" }}
         />
-        <span>{result.name}</span>
+        <span style={{ marginLeft: "20px" }}>{result.name}</span>
       </a>
       <div
         id={result.ggId}
         onClick={() => !isDisabled(result.ggId) && addFavoriteItem(result)}
-        style={{ cursor: isDisabled(result.ggId) ? "not-allowed" : "pointer" }}
+        style={starStyle}
       >
-        <FaStar size={24} color={isFavorite(result.ggId) ? "gold" : "gray"} />
+        <FaStar size={24} />
       </div>
     </li>
   );
