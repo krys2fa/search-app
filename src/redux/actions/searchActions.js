@@ -16,3 +16,8 @@ export const searchAction = (word) => {
     }
   };
 };
+
+export const updateRecentSearches = (search) => ({
+  type: "UPDATE_RECENT_SEARCHES",
+  payload: search,
+});

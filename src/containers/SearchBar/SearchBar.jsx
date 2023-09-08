@@ -1,7 +1,10 @@
 import React from "react";
 import debounce from "lodash/debounce";
 import { useDispatch } from "react-redux";
-import { searchAction } from "../../redux/actions/searchActions.js";
+import {
+  searchAction,
+  updateRecentSearches,
+} from "../../redux/actions/searchActions.js";
 
 const SearchBar = ({ onSearchTermChange }) => {
   const dispatch = useDispatch();
@@ -14,6 +17,7 @@ const SearchBar = ({ onSearchTermChange }) => {
     if (query.trim().length > 0) {
       console.log("q", query.length);
       dispatch(searchAction(query));
+      dispatch(updateRecentSearches(query));
     }
   };
 
