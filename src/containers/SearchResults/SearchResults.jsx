@@ -24,7 +24,16 @@ const SearchResults = ({ searchTerm }) => {
           searchResults &&
           searchResults.map((result) => (
             <li key={result.ggId}>
-              <span>{result.name}</span>
+              <a
+                href={`https://torre.ai/${result.username}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>
+                  <img src={result.imageUrl} alt="" />
+                </span>
+                <span>{result.name}</span>
+              </a>
               <button id={result.ggId} onClick={() => addFavoriteItem(result)}>
                 Add to Favorites
               </button>
