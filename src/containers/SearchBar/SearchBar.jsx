@@ -1,8 +1,11 @@
 import React from "react";
+import debounce from "lodash/debounce";
 
-const handleChange = (event) => {
+const handleSearch = (event) => {
   console.log(event.target.value);
 };
+
+const handleChange = debounce(handleSearch, 500);
 
 const SearchBar = () => {
   return (
