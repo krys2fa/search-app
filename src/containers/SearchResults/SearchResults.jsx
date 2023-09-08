@@ -4,17 +4,18 @@ import { useSelector } from "react-redux";
 const SearchResults = ({ searchTerm }) => {
   console.log("searchterm", searchTerm);
 
-  const searchResults = useSelector((state) => state.search.results);
-  const filteredResults = searchResults.filter((result) =>
-    result.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const searchResults = useSelector((state) => {
+    console.log("state", state);
+    return state.search.results;
+  });
 
   return (
     <div>
       <h2>Search Results</h2>
       <ul>
         {searchTerm.trim().length > 0 &&
-          filteredResults.map((result) => (
+          searchResults &&
+          searchResults.map((result) => (
             <li key={result.ggId}>{result.name}</li>
           ))}
       </ul>
