@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an application that uses the Torre API endpoints to search for individuals and then displays matching individuals to the search term entered into the app. The app also enables one to see the last 10 most recent searches as well as add and/or remove favorite matching individuals from the search results.
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+This application was built as part of a technical test with the following requirements:
 
-### `npm start`
+- Construct a page allowing users to search for names, displaying a list of matching individuals. Take inspiration from **[the torre.ai search](https://torre.ai/search/people-name)**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Upon clicking a search result, users should be directed to their genome. This can be either directly on [torre.ai](http://torre.ai/) or through your own implementation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Additionally, implement **_one or both_** of the following features:
 
-### `npm test`
+- Display a list showcasing up to 10 of the most recent search queries.
+- Provide an option for users to save or favorite individuals and ensure this list is easily accessible.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshot
 
-### `npm run build`
+![screenshot](./src/images/app.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React.
+- Redux.
+- Create React App.
+- Twitter Bootstrap.
+- [Torre Genome Information endpoint](https://torre.ai/${result.username}).
+- [Torre People Search endpoint](https://torre.ai/api/entities/_searchStream).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Live Video Presentation.
 
-### `npm run eject`
+Click [here](https://www.loom.com/share/fe8f776740d0414cada1de31b3496186) to watch a video presentation of the web app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Live App
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Click [here](https://car-show-guide.netlify.app/) to visit a live version of the web app which has been deployed to Netlify.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To get a local copy up and running follow these simple example steps.
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.
+- NPM.
+- Javascript.
+- React.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Setup
 
-### Code Splitting
+- Clone the repository by running `https://github.com/krys2fa/search-app.git` in your terminal or command line.
+- Change directory (i.e. enter `cd search-app` in your terminal) into the project folder.
+- Run `npm install` to install dependencies.
+- Run `npm start` to start the development server.
+- Visit the URL at http://localhost:3000/ to test the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Testing
 
-### Analyzing the Bundle Size
+To run tests,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Run `npm test` in the project directory in your terminal or command line.
 
-### Making a Progressive Web App
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+👤 **Christopher Amanor**
 
-### Advanced Configuration
+- Github: [@krys2fa](https://github.com/krys2fa)
+- Twitter: [@krys2fa](https://twitter.com/krys2fa)
+- Linkedin: [Christopher Amanor](https://www.linkedin.com/in/christopher-amanor/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contributing
 
-### Deployment
+Contributions, issues and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Feel free to check the [issues page](https://github.com/krys2fa/tv-show-guide/issues).
 
-### `npm run build` fails to minify
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Kindly give this repository a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Project specifications by [Torre](https://www.torre.ai).
+
+## 📝 License
+
+This project is licensed under the MIT License.
