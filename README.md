@@ -1,6 +1,25 @@
 # Search App
 
-This is an application that uses the Torre API endpoints to search for individuals and then displays matching individuals to the search term entered into the app. The app also enables one to see the last 10 most recent searches as well as add and/or remove favorite matching individuals from the search results.
+This is an application that uses the Torre API endpoints to search for individuals and then displays matching individuals to the search term entered into the app. The app also enables one to see the last 10 most recent searches as well as add and/or remove favorite matching individuals from the search results. The app is responsive and works well on different screen sizes and devices such as mobile phones and tablets.
+
+## Deliverables
+
+- [The live, production-ready environment.](https://searchi-app.netlify.app/)
+- [A version control system.](https://github.com/krys2fa/search-app)
+
+- If I had more time, I would consider the following additional improvements:
+
+  1. Implement notifications/alerts.
+
+     This will greatly enhance the user experience for users when it comes to guidance in the usage of the app or in error handling. This can be done using alerts and modals.
+
+  2. Implement accessibility best practices.
+
+     This will make the app much more useful to people with disabilities. This can be done by using semantic HTML and keyboard navigation.
+
+  3. Implement thorough testing (i.e. unit, integration and end-to-end testing).
+
+     This will ensure that bugs are caught way before they make their way to production.
 
 ## Requirements
 
