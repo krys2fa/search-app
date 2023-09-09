@@ -13,11 +13,14 @@ This is an application that uses the Torre API endpoints to search for individua
 
      This will greatly enhance the user experience for users when it comes to guidance in the usage of the app or in error handling. This can be done using alerts and modals.
 
-  2. Implement accessibility best practices.
+  2. Implement a loading widget.
+     This will help in letting the user know when data is being fetched.
+
+  3. Implement accessibility best practices.
 
      This will make the app much more useful to people with disabilities. This can be done by using semantic HTML and keyboard navigation.
 
-  3. Implement thorough testing (i.e. unit, integration and end-to-end testing).
+  4. Implement thorough testing (i.e. unit, integration and end-to-end testing).
 
      This will ensure that bugs are caught way before they make their way to production.
 
