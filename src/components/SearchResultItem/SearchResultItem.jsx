@@ -59,7 +59,7 @@ const SearchResultItem = ({
         onClick={() => !isDisabled(result.ggId) && addFavoriteItem(result)}
         style={starStyle}
       >
-        <FaStar size={24} />
+        <FaStar size={24} data-testid="star-icon" />
       </div>
     </li>
   );
