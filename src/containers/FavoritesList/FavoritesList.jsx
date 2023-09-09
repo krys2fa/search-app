@@ -26,7 +26,7 @@ const FavoritesList = () => {
                 className="btn btn-danger btn-sm"
                 onClick={() => removeFavoriteItem(favorite.ggId)}
               >
-                <FaTrashAlt />
+                <FaTrashAlt data-testid="trash-icon" />
               </button>
             </li>
           ))}

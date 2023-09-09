@@ -8,10 +8,8 @@ const mockStore = configureStore([]);
 
 describe("RecentSearches Component", () => {
   it("renders recent searches when available", () => {
-    // Mock the recent searches data
     const recentSearchesData = ["Akin", "Delu"];
 
-    // Render the component with mocked data
     const { getByText } = render(
       <Provider
         store={mockStore({ search: { recentSearches: recentSearchesData } })}
